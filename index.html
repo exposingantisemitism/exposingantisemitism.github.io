@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exposing Antisemitism</title>
+<title>Hello World!</title>
 <style>
   body {
     display: flex;
@@ -12,7 +12,20 @@
     height: 100vh;
     margin: 0;
   }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      flex-direction: column;
+    }
+  }
 </style>
+<script>
+  window.onload = function() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.body.style.flexDirection = 'column';
+    }
+  };
+</script>
 </head>
 <body>
   <h1>Explaining the antisemitic lies:
